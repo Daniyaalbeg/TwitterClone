@@ -11,6 +11,7 @@
 		73447F0D21D7F33E00582752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73447F0C21D7F33E00582752 /* Assets.xcassets */; };
 		73447F1021D7F33E00582752 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73447F0E21D7F33E00582752 /* LaunchScreen.storyboard */; };
 		73447F1821D7F45E00582752 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73447F1721D7F45E00582752 /* HomeController.swift */; };
+		73447F1A21D7F91200582752 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73447F1921D7F91200582752 /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		73447F0F21D7F33E00582752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73447F1121D7F33E00582752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73447F1721D7F45E00582752 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		73447F1921D7F91200582752 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				73447F0521D7F33D00582752 /* AppDelegate.swift */,
 				73447F1721D7F45E00582752 /* HomeController.swift */,
+				73447F1921D7F91200582752 /* CustomCell.swift */,
 				73447F0C21D7F33E00582752 /* Assets.xcassets */,
 				73447F0E21D7F33E00582752 /* LaunchScreen.storyboard */,
 				73447F1121D7F33E00582752 /* Info.plist */,
@@ -132,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73447F0621D7F33D00582752 /* AppDelegate.swift in Sources */,
+				73447F1A21D7F91200582752 /* CustomCell.swift in Sources */,
 				73447F1821D7F45E00582752 /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
