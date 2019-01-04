@@ -8,11 +8,20 @@
 
 import UIKit
 
-class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class HomeController: UIViewController {
 
     let cellID = "cellID"
     let headerID = "headerID"
     let footerID = "footerID"
+
+    weak var collectionView: UICollectionView!
+    let dataSource = HomeDataSource()
+
+
+    override func loadView() {
+        super.loadView()
+        setupCollectionViewLayout()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,39 +29,26 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView.register(CustomCell.self, forCellWithReuseIdentifier: "cellID")
         collectionView.register(UICollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID)
         collectionView.register(UICollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: footerID)
+
+        collectionView.dataSource = dataSource
+        collectionView.delegate = dataSource
     }
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
-    }
+    func setupCollectionViewLayout() {
+        //TODO: Find a way to make the collection view layout methods work. Not sure why they werent working...
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: view.frame.width, height: 50)
+        layout.footerReferenceSize = CGSize(width: view.frame.width, height: 50)
+        layout.headerReferenceSize = CGSize(width: view.frame.width, height: 50)
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellID", for: indexPath)
-        return cell
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 50)
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-
-        if kind == UICollectionView.elementKindSectionHeader {
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerID, for: indexPath)
-            header.backgroundColor = .yellow
-            return header
-        } else {
-            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footerID, for: indexPath)
-            footer.backgroundColor = .yellow
-            return footer
-        }
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 50)
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 50)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(collectionView)
+        collectionView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        collectionView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
+        collectionView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+        self.collectionView = collectionView
     }
 }
+

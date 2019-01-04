@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7326468121DE88C000ED3F74 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7326468021DE88C000ED3F74 /* HomeDataSource.swift */; };
 		73447F0621D7F33D00582752 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73447F0521D7F33D00582752 /* AppDelegate.swift */; };
 		73447F0D21D7F33E00582752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73447F0C21D7F33E00582752 /* Assets.xcassets */; };
 		73447F1021D7F33E00582752 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73447F0E21D7F33E00582752 /* LaunchScreen.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7326468021DE88C000ED3F74 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		73447F0221D7F33D00582752 /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73447F0521D7F33D00582752 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73447F0C21D7F33E00582752 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				73447F0521D7F33D00582752 /* AppDelegate.swift */,
 				73447F1721D7F45E00582752 /* HomeController.swift */,
+				7326468021DE88C000ED3F74 /* HomeDataSource.swift */,
 				73447F1921D7F91200582752 /* CustomCell.swift */,
 				73447F0C21D7F33E00582752 /* Assets.xcassets */,
 				73447F0E21D7F33E00582752 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 				73447F0621D7F33D00582752 /* AppDelegate.swift in Sources */,
 				73447F1A21D7F91200582752 /* CustomCell.swift in Sources */,
 				73447F1821D7F45E00582752 /* HomeController.swift in Sources */,
+				7326468121DE88C000ED3F74 /* HomeDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
